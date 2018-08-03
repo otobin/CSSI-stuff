@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<title>Facebook</title>
+<link rel = "stylesheet" href = "/stylesheets/home.css">
+<div>
+  <h1>CSSI Wall</h1>
+  <div id = "cssiWall">
+    <form action = "/" method = "post">
+      <textarea name = "message" rows = "10" cols = "100"></textarea>
+      <p>
+        <label>Name</label>
+        <input type = "text" name = "name"></br>
+      </p>
+      <p>
+        <button>Post</button>
+      </p>
+    </form>
+  </div>
+</div>
+
+<div>
+  {% for post in posts %}
+    <div class = "post">
+      <p>{{post.name}}:</p>
+      <p>{{post.message}}</p>
+      <p>Posted at: {{post.created_time}}</p>
+    </div>
+  {% endfor %}
+</div>

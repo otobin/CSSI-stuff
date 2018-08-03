@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<title>Google</title>
+
+<h1>Welcome to Google-</h1>
+{% if current_user %}
+<div>
+  Welcome, {{current_user.email()}} !
+  <p><a href = "{{logout_url}}">Log out</a></p>
+</div>
+{% else %}
+  <p><a href = "{{login_url}}">Log in</a></p>
+{% endif %}
+</div>
+
+{% if current_user and not current_person %}
+  You have a profile.
+{% else %}
+  You do not have a profile
+  <form action = "/" method = "post">
+    <p>Your name: <input name = "name"></p>
+    <p>Bio: <input name = "bio"><p>
+    <p><button>Create profile</button></p>
+{% endif %}
+
+{% for person in people %}
+  {% if current_user and current_user.email() == person.email %}
+    <p><strong><a href = "/profile?key={{person.key.urlsafe()}}">Name: {{person.name}}</a></strong></p>
+  {% else %}
+    <p><a href = "/profile?key={{person.key.urlsafe()}}">Name: {{person.name}}</a></p>
+  {% endif %}
+{% endfor %}

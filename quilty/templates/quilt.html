@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<title>Quilt</title>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
+  .patch {
+    padding: 20px;
+    border: 20px solid darkgrey;
+    background-color: lightgrey;
+    margin: 1px;
+  }
+
+
+
+</style>
+
+{% for patch in patches %}
+  <div class = "patch" style="border-color: {{patch.outer_color}}; background-color: {{patch.inner_color}}"></div>
+{% endfor %}
+
+
+<p><a href = "/add">Add a patch</a></p>

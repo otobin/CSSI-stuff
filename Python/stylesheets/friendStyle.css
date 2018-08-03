@@ -1,0 +1,33 @@
+body {
+  background: #50b3e6;
+}
+#michelle {
+
+  border-width: 7px;
+  border-color: #0e5acc;
+  border-style: solid;
+  box-shadow: 0 0 8px black;
+  width: 200px
+}
+
+#beyonce {
+  border-width: 7px;
+  border-color: #0e5acc;
+  border-style: solid;
+  box-shadow: 0 0 8px black;
+  width: 200px
+}
+
+#tina {
+  border-width: 7px;
+  border-color: #0e5acc;
+  border-style: solid;
+  box-shadow: 0 0 8px black;
+  width: 200px
+}
+
+#title {
+  background: #0e5acc;
+  text-align: center;
+  padding: 10px;
+}

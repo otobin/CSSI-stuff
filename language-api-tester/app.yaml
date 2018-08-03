@@ -1,0 +1,15 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+  - url: /stylesheets #tells app engine that when someone asks for stylesheets, look in stylesesheets
+    static_dir: stylesheets
+  - url: /.*
+    script: main.app
+
+libraries: #new library to load up
+  - name: jinja2
+    version: latest
+  - name: webapp2
+    version: latest

@@ -1,0 +1,11 @@
+<p>Username: {{username}}</p>
+<p>Password: {{password}}</p>
+<p>Tier: {{tier}}</p>
+<p>
+{% if legal %}
+  You are legal.
+{% else %}
+  You are too young.
+{% endif %}
+</p>
+<p>Newsletter: {{newsletter}}</p>

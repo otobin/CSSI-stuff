@@ -1,0 +1,6 @@
+Welcome to CSSI {{loction}}!
+<ul>
+{% for student in students %}
+<li><a href = "/?name={{student}}&location={{location}}">{{student}}</a></li> 
+{% endfor %}
+</ul>
